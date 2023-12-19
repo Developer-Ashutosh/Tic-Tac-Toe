@@ -1,6 +1,4 @@
-# Frontend Mentor - Tic Tac Toe solution
-
-This is a solution to the [Tic Tac Toe challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tic-tac-toe-game-Re7ZF_E2v). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+# Tic Tac Toe solution 
 
 ## Table of contents
 
@@ -26,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Tic Tac Toe Solution](https://github.com/Developer-Ashutosh/REST-Countries-Api)
-- Live Site URL: [Tic Tac Toe](https://developer-ashutosh.github.io/REST-Countries-Api/)
+- Solution URL: [Tic Tac Toe Solution](https://github.com/Developer-Ashutosh/Tic-Tac-Toe)
+- Live Site URL: [Tic Tac Toe](https://developer-ashutosh.github.io/Tic-Tac-Toe/)
 
 ## My process
 
@@ -41,7 +39,11 @@ Users should be able to:
 
 ### What I learned
 
+```js
+  let isTie = Array.from(boards).every(board => board.innerHTML !== '');
+```
+
 ## Author
 
 - GitHub - [Ashutosh Kumar](https://www.github.com/Developer-Ashutosh/)
-- Frontend Mentor - [@Ashutosh Kuamr](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@Ashutosh Kuamr](https://www.frontendmentor.io/profile/Developer-Ashutosh)
