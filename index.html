@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Experience AI-infused Tic-Tac-Toe: a futuristic clash of wits! Unleash innovation in this byte-sized battleground. Play now for a gaming revolution! 🚀🤖💯">
+
+  <title>Tic Tac Toe | @Developer Ashutosh</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/x-icon">
+</head>
+
+<body>
+
+  <main class="wrapper">
+    <section class="landing-page">
+      <div class="logo">
+        <img src="./assets/images/logo.svg" alt="Logo Image" class="logo-img">
+      </div>
+      <div class="marks-section">
+        <h2>pick player 1's mark</h2>
+        <div class="marks">
+          <div class="selected"></div>
+          <div class="mark selected-mark" id="cross">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z"
+                fill="#1a2a33" fill-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="mark" id="naught">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z"
+                fill="#a8bfc9" />
+            </svg>
+          </div>
+        </div>
+        <p>Remember: X goes first</p>
+      </div>
+      <div class="start-game">
+        <button class="btn yellow" id="vs-cpu">
+          New game (vs cpu)
+        </button>
+        <button class="btn blue" id="vs-player">
+          New game (vs player)
+        </button>
+      </div>
+    </section>
+
+    <section class="difficulty-page">
+      <div class="logo">
+        <button class="btn back-btn gray"><span>&leftarrow;</span> Back</button>
+        <img src="./assets/images/logo.svg" alt="Logo Image" class="logo-img">
+      </div>
+      <div class="content">
+        <h1>Select your difficulty</h1>
+        <button class="btn yellow" id="easy">
+          easy
+        </button>
+        <button class="btn blue" id="medium">
+          medium
+        </button>
+        <button class="btn gray" id="impossible">
+          impossible
+        </button>
+      </div>
+    </section>
+
+    <section class="board-page">
+      <div class="header">
+        <div class="logo">
+          <img src="./assets/images/logo.svg" alt="Logo Image" class="logo-img">
+        </div>
+        <div class="turn navy">
+          turn :
+          <span id="turn">
+            <img src="./assets/images/icon-x-silver.svg" alt="">
+          </span>
+        </div>
+        <button class="btn gray" id="restart-btn">
+          <img src="./assets/images/icon-restart.svg" alt="">
+        </button>
+      </div>
+      <div class="board">
+        <div class="btn navy"></div>
+        <div class="btn navy"></div>
+        <div class="btn navy"></div>
+        <div class="btn navy"></div>
+        <div class="btn navy"></div>
+        <div class="btn navy"></div>
+        <div class="btn navy"></div>
+        <div class="btn navy"></div>
+        <div class="btn navy"></div>
+      </div>
+      <div class="score-board">
+        <div class="score blue btn">
+          <div class="title">
+            X (<span id="player-x"></span>)
+          </div>
+          <div class="value" id="x-score">00</div>
+        </div>
+        <div class="score gray btn">
+          <div class="title">
+            ties
+          </div>
+          <div class="value" id="tie-score">00</div>
+        </div>
+        <div class="score yellow btn">
+          <div class="title">
+            O (<span id="player-o"></span>)
+          </div>
+          <div class="value" id="o-score">00</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="score-page">
+      <h3 id="winner"></h3>
+      <h1>
+        <img src="./assets/images/icon-x.svg" alt="Icon">
+        <span>Takes the round.</span>
+      </h1>
+      <div class="button">
+        <button class="btn gray" id="quit-btn">Quit</button>
+        <button class="btn" id="next-round-btn">Next round</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

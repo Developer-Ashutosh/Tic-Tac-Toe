@@ -1,0 +1,440 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/fonts/Outfit-VariableFont.woff2');
+}
+
+:root {
+    --Light-Blue: hsl(176, 62%, 47%);
+    --Light-Blue-Hover: hsl(176, 100%, 75%);
+    --Light-Yellow: hsl(40, 86%, 53%);
+    --Light-Yellow-Hover: hsl(40, 100%, 68%);
+    --Dark-Navy: hsl(199, 33%, 15%);
+    --Semi-Dark-Navy: hsl(200, 35%, 19%);
+    --Silver: hsl(200, 17%, 72%);
+    --Silver-Hover: hsl(200, 27%, 84%);
+    --Button-1-Shadow: hsl(38, 84%, 45%);
+    --Button-2-Shadow: hsl(184, 79%, 32%);
+    --Player-Selector: hsl(0, 0%, 85%);
+    --Playbox-Shadow: hsl(197, 19%, 11%);
+    --Gray-Shadow: hsl(204, 15%, 58%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    padding: .8rem;
+    color: var(--Dark-Navy);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn:hover {
+    scale: 1.02;
+}
+
+.yellow {
+    background-color: var(--Light-Yellow);
+    box-shadow: 0 4px 1px var(--Button-1-Shadow);
+}
+
+.yellow:hover {
+    background-color: var(--Light-Yellow-Hover);
+}
+
+.blue {
+    background-color: var(--Light-Blue);
+    box-shadow: 0 4px 1px var(--Button-2-Shadow);
+}
+
+.blue:hover {
+    background-color: var(--Light-Blue-Hover);
+}
+
+.gray {
+    background-color: var(--Silver);
+    box-shadow: 0 4px 1px var(--Gray-Shadow);
+}
+
+.gray:hover {
+    background-color: var(--Silver-Hover);
+}
+
+.navy {
+    background-color: var(--Semi-Dark-Navy);
+    box-shadow: 0 4px 1px var(--Playbox-Shadow);
+}
+
+.back-btn,
+#restart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+.back-btn {
+    padding: .4rem .7rem;
+}
+
+#restart-btn {
+    padding: .5rem .6rem;
+}
+
+.back-btn:hover {
+    scale: 1;
+}
+
+.back-btn span {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.logo-img {
+    cursor: pointer;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: var(--Dark-Navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    transition: top .5s ease;
+}
+
+.marks-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: var(--Semi-Dark-Navy);
+    padding: 1.2rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 7.5px 7.5px 5px var(--Playbox-Shadow);
+}
+
+.marks-section h2 {
+    color: var(--Silver);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.marks {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: .5rem;
+    background-color: var(--Dark-Navy);
+    border-radius: .5rem;
+    padding: .5rem;
+    position: relative;
+}
+
+.marks .selected {
+    content: "";
+    height: 50px;
+    width: 46.7%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: .46rem;
+    background-color: var(--Player-Selector);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.mark {
+    position: relative;
+    height: 50px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.mark:hover {
+    background-color: var(--Silver);
+}
+
+.mark svg {
+    scale: .5;
+}
+
+.mark:hover path {
+    fill: #1a2a33;
+}
+
+.marks-section p {
+    color: var(--Silver);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.start-game {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.difficulty-page {
+    position: absolute;
+    top: -100vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: top .5s ease;
+}
+
+.difficulty-page .logo {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.difficulty-page .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.8rem;
+    background-color: var(--Semi-Dark-Navy);
+    padding: 2.2rem 1.1rem 2.4rem;
+    border-radius: 1rem;
+    box-shadow: 7.5px 7.5px 5px var(--Playbox-Shadow);
+}
+
+.difficulty-page h1 {
+    color: var(--Silver);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.board-page {
+    position: absolute;
+    top: -100vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: top .5s ease;
+}
+
+.board-page .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.turn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    color: var(--Silver);
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: .6rem 1rem .5rem;
+    border-radius: .5rem;
+    transition: all .3s;
+}
+
+.turn #turn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#turn img {
+    height: 22px;
+    width: 22px;
+}
+
+.board {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 1rem;
+}
+
+.board div {
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.board div.outline::before {
+    content: '';
+    background: var(--outline) center no-repeat;
+    scale: .9;
+    position: absolute;
+    top: 44.5%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+}
+
+.board div:hover {
+    scale: 1;
+}
+
+.board div img {
+    scale: .9;
+}
+
+.score-board {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: .3rem 0;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.score .title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -.5px;
+}
+
+.score .value {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.score-page {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--Semi-Dark-Navy);
+    width: 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    transition: all .4s;
+    box-shadow: 0 7.5px 5px var(--Playbox-Shadow);
+    pointer-events: none;
+}
+
+.score-page h3 {
+    color: var(--Silver);
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.score-page h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--Silver);
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+}
+
+.score-page h1 img {
+    height: 37.5px;
+    width: 37.5px;
+}
+
+.score-page .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: .8rem;
+}
+
+.score-page .btn {
+    width: fit-content;
+    font-weight: 600;
+    font-size: 17px;
+    padding: .6rem .7rem;
+}
