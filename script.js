@@ -217,7 +217,10 @@ const checkWinningState = (title1, title2) => {
       winner = boards[pos1].querySelector("img").classList.contains("x")
         ? "cross"
         : "naught";
-      turnIndicator.src = `assets/images/icon-${xTurn ? "x" : "o"}-silver.svg`;
+      turnIndicator.src = `assets/images/icon-${
+        winner === "cross" ? "x" : "o"
+      }-silver.svg`;
+      xTurn = !xTurn;
 
       updateScores(winner);
       updateScorePage(winner, title1, title2);
