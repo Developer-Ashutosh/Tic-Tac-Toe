@@ -103,9 +103,9 @@ const playVsPlayer = () => {
 
 // 🎮 Start a game against the CPU
 const playVsCpu = () => {
-  const difficultyBtns = difficultyPage.querySelector(".content");
+  const difficultyBtn = difficultyPage.querySelector(".content");
 
-  difficultyBtns.addEventListener("click", (event) => {
+  difficultyBtn.addEventListener("click", (event) => {
     const btn = event.target;
     if (btn.classList.contains("btn")) {
       difficultyPage.style.top = "-100vh";

@@ -1,4 +1,4 @@
-# Tic Tac Toe solution 
+# Tic Tac Toe solution
 
 ## Table of contents
 
@@ -40,10 +40,10 @@ Users should be able to:
 ### What I learned
 
 ```js
-  let isTie = Array.from(boards).every(board => board.innerHTML !== '');
+let isTie = Array.from(boards).every((board) => board.innerHTML !== "");
 ```
 
 ## Author
 
 - GitHub - [Ashutosh Kumar](https://www.github.com/Developer-Ashutosh/)
-- Frontend Mentor - [@Ashutosh Kuamr](https://www.frontendmentor.io/profile/Developer-Ashutosh)
+- Frontend Mentor - [@Ashutosh Kumar](https://www.frontendmentor.io/profile/Developer-Ashutosh)
